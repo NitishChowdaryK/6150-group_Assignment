@@ -28,3 +28,12 @@ function setAlert(type, msg) {
     alertBox.classList.add("d-none");
     alertBox.textContent = "";
   }
+
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim());
+  }
+
+  function isValidPassword(value) {
+    const v = value.trim();
+    return v.length >= 8 && /\d/.test(v);
+  }
