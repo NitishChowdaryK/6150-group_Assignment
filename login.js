@@ -37,3 +37,10 @@ function setAlert(type, msg) {
     const v = value.trim();
     return v.length >= 8 && /\d/.test(v);
   }
+if (togglePw) {
+    togglePw.addEventListener("click", () => {
+      const isHidden = password.type === "password";
+      password.type = isHidden ? "text" : "password";
+      togglePw.textContent = isHidden ? "Hide" : "Show";
+    });
+  }
