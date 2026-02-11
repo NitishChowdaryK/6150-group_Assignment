@@ -17,3 +17,14 @@
     return;
   }
 })();
+
+function setAlert(type, msg) {
+    alertBox.className = `alert alert-${type}`;
+    alertBox.textContent = msg;
+    alertBox.classList.remove("d-none");
+  }
+
+  function clearAlert() {
+    alertBox.classList.add("d-none");
+    alertBox.textContent = "";
+  }
