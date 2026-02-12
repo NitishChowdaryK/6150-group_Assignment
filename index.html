@@ -361,6 +361,41 @@
       </div>
     </section>
 
+    <footer class="border-top bg-white">
+      <div class="container py-4 d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <div class="text-muted small">©️ <span id="year"></span> NovaCart. All rights reserved.</div>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="link-secondary">Privacy</a>
+          <a href="#" class="link-secondary">Terms</a>
+          <a href="login.html" class="link-primary">Login</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Get 10% off your first order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted mb-3">Enter your email to receive a discount code (demo).</p>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="you@example.com" />
+              <button class="btn btn-primary" type="button" onclick="showToast('📩 Discount code sent (demo)!')">
+                Send
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
   </body>
 </html>
