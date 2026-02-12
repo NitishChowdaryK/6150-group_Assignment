@@ -1,8 +1,7 @@
 /* ============================================
-   NovaCart — Custom Stylesheet
+   NovaCart — Custom Stylesheet (Final)
    ============================================ */
 
-/* ---------- Design Tokens ---------- */
 :root {
   --brand: #0d6efd;
   --brand2: #2b8cff;
@@ -20,22 +19,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ---------- Brand Logo ---------- */
+/* ---------- Brand ---------- */
 .brand {
   letter-spacing: .2px;
 }
 
-.brand-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--brand), var(--brand2));
-  margin-right: 8px;
-  transform: translateY(-1px);
-}
-
-/* ---------- Hero Section ---------- */
+/* ---------- Hero ---------- */
 .hero {
   background:
     radial-gradient(1000px 500px at 20% 10%, rgba(13, 110, 253, .12), transparent 60%),
@@ -44,9 +33,7 @@ html {
   border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
 
-.icon-box {
-  line-height: 1;
-}
+.icon-box { line-height: 1; }
 
 .stat-pill {
   background: var(--bg);
@@ -57,24 +44,14 @@ html {
   color: var(--muted);
 }
 
-/* ---------- Mini Card ---------- */
-.mini-card {
-  background: #ffffff;
-}
-
-/* ---------- Global Component Polish ---------- */
-.card,
-.modal-content,
-.carousel,
-.accordion-item {
+/* ---------- Component Polish ---------- */
+.card, .modal-content, .carousel, .accordion-item {
   border-color: rgba(0, 0, 0, .08) !important;
 }
 
-.rounded-4 {
-  border-radius: 1rem !important;
-}
+.rounded-4 { border-radius: 1rem !important; }
 
-/* ---------- Button Glow ---------- */
+/* ---------- Buttons ---------- */
 .btn-primary {
   box-shadow: 0 4px 14px rgba(13, 110, 253, .2);
   transition: all .2s ease;
@@ -101,34 +78,22 @@ html {
   background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
 }
 
-/* ---------- Carousel Gradients ---------- */
-.bg-gradient-blue {
-  background: linear-gradient(135deg, #0d6efd, #2b8cff);
-}
+/* ---------- Carousel ---------- */
+.bg-gradient-blue  { background: linear-gradient(135deg, #0d6efd, #2b8cff); }
+.bg-gradient-green { background: linear-gradient(135deg, #198754, #20c997); }
+.bg-gradient-dark  { background: linear-gradient(135deg, #1a1a2e, #16213e); }
 
-.bg-gradient-green {
-  background: linear-gradient(135deg, #198754, #20c997);
-}
-
-.bg-gradient-dark {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-}
-
-.carousel-slide h3 {
-  text-shadow: 0 2px 8px rgba(0, 0, 0, .15);
-}
+.carousel-slide h3 { text-shadow: 0 2px 8px rgba(0, 0, 0, .15); }
 
 /* ---------- Dropdown Animation ---------- */
-.dropdown-menu-animate {
-  animation: fadeDown .2s ease;
-}
+.dropdown-menu-animate { animation: fadeDown .2s ease; }
 
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- Accordion Polish ---------- */
+/* ---------- Accordion ---------- */
 .accordion-button:not(.collapsed) {
   background: rgba(13, 110, 253, .04);
   color: var(--brand);
@@ -140,57 +105,44 @@ html {
   border-color: rgba(13, 110, 253, .15);
 }
 
-/* ---------- Toast Entrance ---------- */
-.toast.showing {
-  animation: slideUp .3s ease;
-}
+/* ---------- Toast ---------- */
+.toast.showing { animation: slideUp .3s ease; }
 
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
 }
 
-/* ---------- Badge Polish ---------- */
-.badge {
-  font-weight: 600;
-  letter-spacing: .3px;
-}
+/* ---------- Badge ---------- */
+.badge { font-weight: 600; letter-spacing: .3px; }
 
 /* ---------- Footer ---------- */
-footer a:hover {
-  color: #ffffff !important;
-}
+footer a:hover { color: #ffffff !important; }
 
-footer .btn-outline-light {
+.social-btn {
   width: 36px;
   height: 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0;
+  border-radius: 50% !important;
 }
 
 /* ============================================
-   LOGIN PAGE
+   LOGIN / REGISTER PAGES
    ============================================ */
-.login-body {
-  background: var(--bg);
-}
+.login-body { background: var(--bg); }
 
 .login-side-panel {
   background: linear-gradient(135deg, var(--brand), var(--brand2));
 }
 
-/* Fix: validation feedback styled when JS removes d-none */
-.invalid-feedback:not(.d-none) {
-  display: block;
-}
+/* ---------- Validation Feedback ---------- */
+.invalid-feedback:not(.d-none) { display: block; }
+.valid-feedback:not(.d-none)   { display: block; }
 
-.valid-feedback:not(.d-none) {
-  display: block;
-}
-
-/* Input-group: color the ENTIRE border group green or red */
+/* Entire input-group turns red/green */
 .input-group:has(.form-control.is-invalid) .input-group-text,
 .input-group:has(.form-control.is-invalid) .form-control,
 .input-group:has(.form-control.is-invalid) .btn {
@@ -203,35 +155,19 @@ footer .btn-outline-light {
   border-color: #198754 !important;
 }
 
-/* Input icon prefix subtle bg */
-.input-group-text {
-  border-color: rgba(0, 0, 0, .08);
-}
+/* Input icon subtle bg */
+.input-group-text { border-color: rgba(0, 0, 0, .08); }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 991px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+  .hero h1 { font-size: 2.2rem; }
 }
 
 @media (max-width: 576px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero .lead {
-    font-size: .95rem;
-  }
-
-  .product-img-placeholder {
-    height: 120px;
-  }
-
-  .stat-pill {
-    font-size: .7rem;
-    padding: 4px 10px;
-  }
+  .hero h1 { font-size: 1.8rem; }
+  .hero .lead { font-size: .95rem; }
+  .product-img-placeholder { height: 120px; }
+  .stat-pill { font-size: .7rem; padding: 4px 10px; }
 }
