@@ -12,6 +12,7 @@ body{ color:var(--ink); }
   letter-spacing:.2px;
 }
 
+
 .brand-dot{
   display:inline-block;
   width:10px;height:10px;
@@ -20,6 +21,7 @@ body{ color:var(--ink); }
   margin-right:8px;
   transform: translateY(-1px);
 }
+/*Hero section background*/
 
 .hero{
   background:
