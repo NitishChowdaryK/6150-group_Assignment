@@ -30,7 +30,7 @@ body{ color:var(--ink); }
     linear-gradient(180deg, #ffffff, var(--bg));
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
-
+/*Card and component border styling*/
 .mini-card{
   background: #ffffff;
 }
