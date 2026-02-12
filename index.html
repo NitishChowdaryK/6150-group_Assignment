@@ -228,5 +228,232 @@
         </div>
       </div>
     </header>
+
+    <!-- PRODUCTS (Cards + Grid) -->
+    <main class="container py-5" id="products">
+      <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="fw-bold mb-1">Featured Products</h2>
+          <p class="text-muted mb-0">Clean design, real value, clear pricing.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+            Quick View
+          </button>
+          <a class="btn btn-primary" href="login.html">Sign in to Checkout</a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="card-title mb-1">Wireless Headphones</h5>
+                <span class="badge text-bg-success">New</span>
+              </div>
+              <p class="text-muted small mb-3">Noise reduction • 20h battery</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="fw-bold fs-5">$59.99</div>
+                <button class="btn btn-outline-primary" type="button" onclick="showToast('🎧 Headphones added to cart')">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4" id="deals">
+          <div class="card h-100 shadow-sm rounded-4 border-primary">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="card-title mb-1">Smart Water Bottle</h5>
+                <span class="badge text-bg-primary">Deal</span>
+              </div>
+              <p class="text-muted small mb-3">Hydration reminders • App sync</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="fw-bold fs-5">$24.99</span>
+                  <span class="text-muted text-decoration-line-through ms-2">$34.99</span>
+                </div>
+                <button class="btn btn-primary" type="button" onclick="showToast('💧 Bottle added to cart')">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm rounded-4">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h5 class="card-title mb-1">Minimal Backpack</h5>
+                <span class="badge text-bg-light border">Sale</span>
+              </div>
+              <p class="text-muted small mb-3">Lightweight • Laptop sleeve</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="fw-bold fs-5">$39.99</div>
+                <button class="btn btn-outline-primary" type="button" onclick="showToast('🎒 Backpack added to cart')">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="mt-4" aria-label="Product pages">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <section class="container pb-5" id="faq">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <h2 class="fw-bold">FAQ</h2>
+          <p class="text-muted">Quick answers to common questions.</p>
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Do you offer free shipping?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes — free shipping on orders $50+ within the US.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Can I return items?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Returns are available within 14 days for unused items with packaging.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Is my payment information secure?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  This is a course project demo. In real apps we’d use secure payment gateways + HTTPS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-top bg-white">
+      <div class="container py-4 d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <div class="text-muted small">©️ <span id="year"></span> NovaCart. All rights reserved.</div>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="link-secondary">Privacy</a>
+          <a href="#" class="link-secondary">Terms</a>
+          <a href="login.html" class="link-primary">Login</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Get 10% off your first order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted mb-3">Enter your email to receive a discount code (demo).</p>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="you@example.com" />
+              <button class="btn btn-primary" type="button" onclick="showToast('📩 Discount code sent (demo)!')">
+                Send
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold">Quick View</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <div class="fw-bold">Wireless Headphones</div>
+                <div class="text-muted small">Noise reduction • 20h battery</div>
+              </div>
+              <span class="badge text-bg-success">New</span>
+            </div>
+            <hr />
+            <p class="mb-0 text-muted">This is a demo modal to show product details using Bootstrap components.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-primary" type="button" onclick="showToast('✅ Added from Quick View!')">
+              Add to Cart
+            </button>
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="mainToast"
+        class="toast align-items-center text-bg-primary border-0"
+        role="alert"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body" id="toastMsg">Hello!</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- please add script file over here -->
+    <script src="#"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function showToast(message) {
+        const msg = document.getElementById("toastMsg");
+        msg.textContent = message;
+
+        const toastEl = document.getElementById("mainToast");
+        const toast = new bootstrap.Toast(toastEl, { delay: 2200 });
+        toast.show();
+      }
+    </script>
   </body>
 </html>
