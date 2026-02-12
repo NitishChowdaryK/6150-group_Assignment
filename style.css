@@ -1,0 +1,50 @@
+
+/*Custom Bootstrap 5 Theme - style.css*/
+:root{
+  --brand:#0d6efd;
+  --brand2:#2b8cff;
+  --ink:#0b1220;
+  --muted:#5b667a;
+  --bg:#f6f8fc;
+}
+
+body{ color:var(--ink); }
+/*Brand styling for logo and headings*/
+.brand{
+  letter-spacing:.2px;
+}
+
+
+.brand-dot{
+  display:inline-block;
+  width:10px;height:10px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  margin-right:8px;
+  transform: translateY(-1px);
+}
+/*Hero section background*/
+
+.hero{
+  background:
+    radial-gradient(1000px 500px at 20% 10%, rgba(13,110,253,.15), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(43,140,255,.12), transparent 60%),
+    linear-gradient(180deg, #ffffff, var(--bg));
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+/*Card and component border styling*/
+.mini-card{
+  background: #ffffff;
+}
+
+.card, .modal-content, .carousel, .accordion-item{
+  border-color: rgba(0,0,0,.08) !important;
+}
+/*Button shadow effect*/
+.btn-primary{
+  box-shadow: 0 10px 30px rgba(13,110,253,.18);
+}
+/*Utility class for rounded corners*/
+.rounded-4{
+  border-radius: 1rem !important;
+}
