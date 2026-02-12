@@ -1,3 +1,5 @@
+
+/*Custom Bootstrap 5 Theme - style.css*/
 :root{
   --brand:#0d6efd;
   --brand2:#2b8cff;
@@ -7,7 +9,7 @@
 }
 
 body{ color:var(--ink); }
-
+/*Brand styling for logo and headings*/
 .brand{
   letter-spacing:.2px;
 }
@@ -30,7 +32,7 @@ body{ color:var(--ink); }
     linear-gradient(180deg, #ffffff, var(--bg));
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
-
+/*Card and component border styling*/
 .mini-card{
   background: #ffffff;
 }
@@ -38,11 +40,11 @@ body{ color:var(--ink); }
 .card, .modal-content, .carousel, .accordion-item{
   border-color: rgba(0,0,0,.08) !important;
 }
-
+/*Button shadow effect*/
 .btn-primary{
   box-shadow: 0 10px 30px rgba(13,110,253,.18);
 }
-
+/*Utility class for rounded corners*/
 .rounded-4{
   border-radius: 1rem !important;
 }
