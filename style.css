@@ -38,7 +38,7 @@ body{ color:var(--ink); }
 .card, .modal-content, .carousel, .accordion-item{
   border-color: rgba(0,0,0,.08) !important;
 }
-
+/*Button shadow effect*/
 .btn-primary{
   box-shadow: 0 10px 30px rgba(13,110,253,.18);
 }
