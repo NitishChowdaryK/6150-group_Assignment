@@ -7,7 +7,7 @@
 }
 
 body{ color:var(--ink); }
-
+/*Brand styling for logo and headings*/
 .brand{
   letter-spacing:.2px;
 }
