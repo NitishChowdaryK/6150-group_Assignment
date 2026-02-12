@@ -42,7 +42,7 @@ body{ color:var(--ink); }
 .btn-primary{
   box-shadow: 0 10px 30px rgba(13,110,253,.18);
 }
-
+/*Utility class for rounded corners*/
 .rounded-4{
   border-radius: 1rem !important;
 }
