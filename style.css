@@ -1,50 +1,237 @@
+/* ============================================
+   NovaCart — Custom Stylesheet
+   ============================================ */
 
-/*Custom Bootstrap 5 Theme - style.css*/
-:root{
-  --brand:#0d6efd;
-  --brand2:#2b8cff;
-  --ink:#0b1220;
-  --muted:#5b667a;
-  --bg:#f6f8fc;
+/* ---------- Design Tokens ---------- */
+:root {
+  --brand: #0d6efd;
+  --brand2: #2b8cff;
+  --ink: #0b1220;
+  --muted: #5b667a;
+  --bg: #f6f8fc;
 }
 
-body{ color:var(--ink); }
-/*Brand styling for logo and headings*/
-.brand{
-  letter-spacing:.2px;
+body {
+  color: var(--ink);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
-.brand-dot{
-  display:inline-block;
-  width:10px;height:10px;
-  border-radius:999px;
-  background:linear-gradient(135deg,var(--brand),var(--brand2));
-  margin-right:8px;
+/* ---------- Brand Logo ---------- */
+.brand {
+  letter-spacing: .2px;
+}
+
+.brand-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  margin-right: 8px;
   transform: translateY(-1px);
 }
-/*Hero section background*/
 
-.hero{
+/* ---------- Hero Section ---------- */
+.hero {
   background:
-    radial-gradient(1000px 500px at 20% 10%, rgba(13,110,253,.15), transparent 60%),
-    radial-gradient(900px 500px at 80% 30%, rgba(43,140,255,.12), transparent 60%),
+    radial-gradient(1000px 500px at 20% 10%, rgba(13, 110, 253, .12), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(43, 140, 255, .08), transparent 60%),
     linear-gradient(180deg, #ffffff, var(--bg));
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
-/*Card and component border styling*/
-.mini-card{
+
+.icon-box {
+  line-height: 1;
+}
+
+.stat-pill {
+  background: var(--bg);
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+/* ---------- Mini Card ---------- */
+.mini-card {
   background: #ffffff;
 }
 
-.card, .modal-content, .carousel, .accordion-item{
-  border-color: rgba(0,0,0,.08) !important;
+/* ---------- Global Component Polish ---------- */
+.card,
+.modal-content,
+.carousel,
+.accordion-item {
+  border-color: rgba(0, 0, 0, .08) !important;
 }
-/*Button shadow effect*/
-.btn-primary{
-  box-shadow: 0 10px 30px rgba(13,110,253,.18);
-}
-/*Utility class for rounded corners*/
-.rounded-4{
+
+.rounded-4 {
   border-radius: 1rem !important;
+}
+
+/* ---------- Button Glow ---------- */
+.btn-primary {
+  box-shadow: 0 4px 14px rgba(13, 110, 253, .2);
+  transition: all .2s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(13, 110, 253, .3);
+  transform: translateY(-1px);
+}
+
+/* ---------- Product Cards ---------- */
+.product-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .1) !important;
+}
+
+.product-img-placeholder {
+  height: 160px;
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+}
+
+/* ---------- Carousel Gradients ---------- */
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #0d6efd, #2b8cff);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(135deg, #198754, #20c997);
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.carousel-slide h3 {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+/* ---------- Dropdown Animation ---------- */
+.dropdown-menu-animate {
+  animation: fadeDown .2s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Accordion Polish ---------- */
+.accordion-button:not(.collapsed) {
+  background: rgba(13, 110, 253, .04);
+  color: var(--brand);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(13, 110, 253, .15);
+}
+
+/* ---------- Toast Entrance ---------- */
+.toast.showing {
+  animation: slideUp .3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ---------- Badge Polish ---------- */
+.badge {
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+/* ---------- Footer ---------- */
+footer a:hover {
+  color: #ffffff !important;
+}
+
+footer .btn-outline-light {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ============================================
+   LOGIN PAGE
+   ============================================ */
+.login-body {
+  background: var(--bg);
+}
+
+.login-side-panel {
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+}
+
+/* Fix: validation feedback styled when JS removes d-none */
+.invalid-feedback:not(.d-none) {
+  display: block;
+}
+
+.valid-feedback:not(.d-none) {
+  display: block;
+}
+
+/* Input-group: color the ENTIRE border group green or red */
+.input-group:has(.form-control.is-invalid) .input-group-text,
+.input-group:has(.form-control.is-invalid) .form-control,
+.input-group:has(.form-control.is-invalid) .btn {
+  border-color: #dc3545 !important;
+}
+
+.input-group:has(.form-control.is-valid) .input-group-text,
+.input-group:has(.form-control.is-valid) .form-control,
+.input-group:has(.form-control.is-valid) .btn {
+  border-color: #198754 !important;
+}
+
+/* Input icon prefix subtle bg */
+.input-group-text {
+  border-color: rgba(0, 0, 0, .08);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .lead {
+    font-size: .95rem;
+  }
+
+  .product-img-placeholder {
+    height: 120px;
+  }
+
+  .stat-pill {
+    font-size: .7rem;
+    padding: 4px 10px;
+  }
 }
