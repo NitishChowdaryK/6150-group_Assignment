@@ -1,127 +1,207 @@
-# NovaCart – Responsive E-Commerce Web Application (Course Project)
+# 🛒 NovaCart – Group Assignment 5
 
-## 1. Project Title
-NovaCart: A Front-End E-Commerce Web Application Using Bootstrap 5
+NovaCart is a responsive e-commerce web application built using HTML, CSS, Bootstrap, and JavaScript.
 
----
-
-## 2. Project Description
-
-NovaCart is a responsive front-end e-commerce website developed as part of a web development course project. The objective of this project is to demonstrate the practical implementation of modern UI design principles using Bootstrap 5 components, structured HTML5, custom CSS styling, and JavaScript-based interactivity.
-
-The application simulates an online shopping platform with product listings, navigation elements, modal dialogs, and user interface feedback mechanisms. This project focuses on client-side design and interaction without backend integration.
+This project implements client-side user authentication using Local Storage (no database required), as required for Group Assignment 5.
 
 ---
 
-## 3. Objectives
+# 👥 Group Members & Responsibilities
 
-The primary objectives of this project are:
-
-- To implement multiple Bootstrap 5 components correctly.
-- To design a responsive layout adaptable to different screen sizes.
-- To apply semantic HTML structure.
-- To demonstrate client-side JavaScript interactivity.
-- To organize a collaborative Git-based workflow among team members.
-
----
-
-## 4. Technologies Used
-
-- HTML5 – Page structure and semantic layout  
-- CSS3 – Custom styling  
-- Bootstrap 5.3.3 – UI components and responsive grid system  
-- JavaScript (Vanilla JS) – Interactivity and form validation  
-- Git & GitHub – Version control and team collaboration  
+| Member   | Responsibility |
+|-----------|----------------|
+| Nitish   | Git repository setup, login.html |
+| Adithya  | index.html (homepage layout & components) |
+| Nihar    | index.html (carousel, products, modals) |
+| Rithwik  | style.css (UI styling & enhancements) |
+| Murali   | login.js (login authentication logic) |
+| Team     | register.js (registration logic) |
 
 ---
 
-## 5. Bootstrap Components Implemented
-
-The following Bootstrap components are used within the project:
-
-1. Navbar  
-2. Dropdown Menu  
-3. Breadcrumb  
-4. Carousel  
-5. Cards  
-6. Badges  
-7. Buttons  
-8. Pagination  
-9. Accordion (FAQ Section)  
-10. Modals  
-11. Toast Notifications  
-12. Spinner  
-
-Each component was implemented according to Bootstrap documentation standards and integrated into the application layout appropriately.
-
----
-
-## 6. System Features
-
-### 6.1 Home Page (index.html)
-
-- Responsive navigation bar with dropdown categories  
-- Search form interface  
-- Promotional hero section with carousel  
-- Product display using Bootstrap card grid  
-- Toast notifications for simulated cart actions  
-- Newsletter subscription modal  
-- Quick-view product modal  
-- FAQ section using accordion component  
-
-### 6.2 Login Page (login.html)
-
-- Structured login form with validation  
-- Show/Hide password toggle  
-- Alert feedback for user authentication (demo-based)  
-- Responsive card-based layout  
-
----
-
-## 7. Project Structure
+# 📂 Project Structure
 
 NovaCart/
 │
-├── index.html  
-├── login.html  
-├── login.js  
-├── style.css  
-└── README.md  
+├── index.html
+├── login.html
+├── register.html
+├── style.css
+├── login.js
+├── register.js
+└── README.md
 
 ---
 
-## 8. Team Members and Contributions
+# 🔐 Authentication Flow (Local Storage Based)
 
-| Team Member | Contribution |
-|-------------|-------------|
-| Nitish      | Git repository setup, Login page structure (login.html) |
-| Adithya     | Home page layout and navigation structure (index.html) |
-| Nihar       | Hero section, product grid, modal implementation |
-| Rithwik     | Custom styling and layout enhancements (style.css) |
-| Murali      | Login form interactivity and validation (login.js) |
+This project implements user authentication entirely on the client side using browser Local Storage.
 
-All team members contributed through individual Git branches and commits before final integration.
+No backend or database is used.
 
 ---
 
-## 9. Execution Instructions
+## 1️⃣ Registration Page (register.html)
 
-To run the project:
+User enters:
+- Email / Username
+- Password (minimum 8 characters, must include at least 1 number)
 
-1. Clone or download the repository.
-2. Open index.html in a web browser.
-3. Navigate to login.html using the Login button in the navbar.
-
----
-
-## 10. Limitations
-
-- No backend or database integration.
-- No real authentication or payment processing.
-- All cart interactions are simulated using client-side JavaScript.
+Process:
+- User credentials are saved to Local Storage.
+- Stored under the key: "novacart_users"
+- After successful registration, user is redirected to login.html.
 
 ---
 
-## 11. Conclusion
+## 2️⃣ Login Page (login.html)
 
-This project demonstrates the implementation of a structured, responsive e-commerce interface using Bootstrap and modern web development practices. It highlights collaborative version control usage and modular responsibility distribution among team members.
+User enters:
+- Email / Username
+- Password
+
+Process:
+- Credentials are validated against stored users in Local Storage.
+- If credentials match:
+  - A session object is created.
+  - Stored under the key: "novacart_session"
+  - User is redirected to index.html.
+- If credentials do not match:
+  - Error message is displayed.
+
+---
+
+# 🧠 How Local Storage Is Used
+
+## Stored Users
+
+Key:
+novacart_users
+
+Example Value:
+[
+  {
+    "id": "user@example.com",
+    "password": "password123",
+    "createdAt": "2024-..."
+  }
+]
+
+---
+
+## Stored Session
+
+Key:
+novacart_session
+
+Example Value:
+{
+  "id": "user@example.com",
+  "loginAt": "2024-..."
+}
+
+---
+
+# 🎨 Features Implemented
+
+✔ Responsive Bootstrap layout  
+✔ Navigation bar with dropdown  
+✔ Product cards  
+✔ Carousel component  
+✔ Modals (Newsletter + Quick View)  
+✔ Toast notifications  
+✔ Accordion FAQ section  
+✔ Client-side authentication  
+✔ Form validation  
+✔ Password visibility toggle  
+✔ Clean Git branching workflow  
+
+---
+
+# 🚀 How To Run The Project
+
+1. Clone the repository:
+
+git clone <https://github.com/NitishChowdaryK/6150-group_Assignment.git>
+
+2. Open the project folder in VS Code.
+
+3. Open index.html in a browser.
+
+4. Click Login → Create Account.
+
+5. Register a new user.
+
+6. Login using your newly created credentials.
+
+No server required. The project runs entirely in the browser.
+
+---
+
+# 🧩 Git Workflow Strategy
+
+Each team member worked in separate feature branches:
+
+feature-login  
+feature-register  
+feature-homepage  
+feature-styling  
+
+Branches will be merged into main after completion.
+
+Example commit messages:
+
+feat: create login page UI  
+feat: implement localStorage login validation  
+feat: implement registration using localStorage  
+style: improve card shadows and navbar styling  
+docs: add full project README  
+
+---
+
+# ⚠️ Important Notes
+
+- This is a course project.
+- Authentication is client-side only.
+- Passwords are stored in plain text (for educational purposes only).
+- Local Storage is used to demonstrate browser-based persistence.
+- Real-world applications require secure backend authentication and password encryption.
+
+---
+
+# 📚 Technologies Used
+
+- HTML5
+- CSS3
+- Bootstrap 5.3
+- JavaScript (ES6)
+- Browser Local Storage
+- Git & GitHub
+
+---
+
+# 📈 Learning Outcomes
+
+- Understanding client-side storage
+- Implementing authentication without a database
+- Handling form validation
+- Managing session state using Local Storage
+- Collaborating using Git branches
+- Separating logic into multiple JS files
+
+---
+
+# 🔮 Future Improvements
+
+- Add protected dashboard page
+- Encrypt stored passwords
+- Add shopping cart persistence
+- Add session expiration logic
+
+---
+
+# 📜 License
+
+This project is for academic purposes only.
+
+© NovaCart – Group Assignment 5
